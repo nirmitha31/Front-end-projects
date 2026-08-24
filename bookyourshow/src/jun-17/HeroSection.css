@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin: 30px 0px 30px 0px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh; /* 16:9 */
+  height: 100vh;
+  min-width: 100%;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: absolute;
+  left: 60px;
+  bottom: 80px;
+  z-index: 2;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  line-height: 0.95;
+  margin-bottom: 30px;
+}
+
+.watch-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 18px 30px;
+  cursor: pointer;
+}

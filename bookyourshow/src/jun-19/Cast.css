@@ -1,0 +1,104 @@
+.cast-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cast-section h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #0f0f0f;
+}
+
+.cast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cast-card {
+  width: 230px;
+  padding: 20px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(54, 61, 79, 0.95),
+    rgba(78, 66, 91, 0.95)
+  );
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition: all 0.35s ease;
+
+  cursor: pointer;
+}
+
+.cast-card:hover {
+  transform: translateY(-10px) scale(1.04);
+
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+
+  background: linear-gradient(
+    145deg,
+    rgba(70, 77, 100, 0.98),
+    rgba(96, 80, 112, 0.98)
+  );
+}
+
+.cast-card img {
+  width: 165px;
+  height: 165px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 4px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.35s ease;
+}
+
+.cast-card:hover img {
+  transform: scale(1.08);
+
+  border-color: crimson;
+}
+
+.cast-card h3 {
+  margin-top: 18px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.cast-card p {
+  margin-top: 8px;
+
+  font-size: 17px;
+
+  color: #d5d5d5;
+}
+
+@media (max-width: 1200px) {
+  .cast-container {
+    justify-content: center;
+  }
+}
