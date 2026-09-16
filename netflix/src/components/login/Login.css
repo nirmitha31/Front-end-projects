@@ -1,0 +1,120 @@
+/* Full page background */
+.login {
+  position: relative;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/9b1d5b7d-bg.jpg")
+    center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+.login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Logo */
+.login__logo {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  width: 130px;
+  z-index: 2;
+}
+
+/* Login Card */
+.login__body {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  padding: 60px 50px;
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Heading */
+.login__body h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Form */
+.login__body form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs */
+.login__body input {
+  height: 50px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  background: #333;
+  color: white;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.login__body input:focus {
+  background: #444;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+.login__body button {
+  margin-top: 10px;
+  height: 50px;
+
+  background: #e50914;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.login__body button:hover {
+  background: #f6121d;
+  transform: scale(1.02);
+}
+
+/* Footer text */
+.login__body h4 {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.gray {
+  color: #b3b3b3;
+}
+
+.link {
+  color: white;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,37 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Avatar */
+.avatar {
+  width: 35px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Optional: Scroll effect (like Netflix) */
+.navbar.scrolled {
+  background-color: black;
+  transition: background-color 0.3s ease;
+}
