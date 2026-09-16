@@ -1,0 +1,347 @@
+/* ==================================
+   MAIN VIDEO CARD
+================================== */
+
+.food-video-card {
+  position: relative;
+
+  width: 100%;
+  height: 330px;
+
+  margin-top: 22px;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  background: #17100c;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* ==================================
+   YOUTUBE VIDEO
+================================== */
+
+.food-youtube-video {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 140%;
+  height: 140%;
+
+  transform: translate(-50%, -50%) scale(1.02);
+
+  border: none;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+/*
+   Slight darkness before hover
+*/
+
+.food-video-card:not(:hover) .food-youtube-video {
+  filter: brightness(0.55) saturate(0.9);
+}
+
+/*
+   Video becomes bright on hover
+*/
+
+.food-video-card:hover .food-youtube-video {
+  filter: brightness(1);
+
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* ==================================
+   DARK OVERLAY
+================================== */
+
+.food-video-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(12, 6, 3, 0.92) 0%,
+    rgba(12, 6, 3, 0.72) 45%,
+    rgba(12, 6, 3, 0.3) 100%
+  );
+
+  transition: opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+/*
+   Remove darkness when hovering
+*/
+
+.food-video-card:hover .food-video-overlay {
+  opacity: 0;
+}
+
+/* ==================================
+   CONTENT
+================================== */
+
+.food-video-content {
+  position: absolute;
+
+  left: 25px;
+  right: 20px;
+  bottom: 27px;
+
+  z-index: 2;
+
+  color: #ffffff;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+
+  pointer-events: none;
+}
+
+/*
+   Hide text when video starts
+*/
+
+.food-video-card:hover .food-video-content {
+  opacity: 0;
+
+  transform: translateY(15px);
+}
+
+/* ==================================
+   SMALL LABEL
+================================== */
+
+.food-video-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #ffb267;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+/* ==================================
+   HEADING
+================================== */
+
+.food-video-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.5px;
+}
+
+/* ==================================
+   DESCRIPTION
+================================== */
+
+.food-video-content p {
+  margin: 12px 0 18px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+/* ==================================
+   WATCH AREA
+================================== */
+
+.food-watch-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+/* PLAY BUTTON */
+
+.food-play-button {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #ff7800, #ff5200);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  padding-left: 2px;
+
+  box-shadow: 0 5px 17px rgba(255, 91, 0, 0.4);
+}
+
+.food-watch-area strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.food-watch-area span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 9px;
+}
+
+/* ==================================
+   PLAYING LABEL
+================================== */
+
+.video-playing-label {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 4;
+
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  opacity: 0;
+
+  transform: translateY(-7px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  pointer-events: none;
+
+  backdrop-filter: blur(6px);
+}
+
+/*
+   Show Kitchen Live when video plays
+*/
+
+.food-video-card:hover .video-playing-label {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ==================================
+   BORDER EFFECT
+================================== */
+
+.food-video-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  border: 2px solid transparent;
+
+  border-radius: 22px;
+
+  pointer-events: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.food-video-card:hover::after {
+  border-color: rgba(255, 101, 0, 0.75);
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+  .food-video-card {
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 320px;
+
+    margin: 22px auto 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .food-video-card {
+    height: 280px;
+  }
+
+  .food-video-content {
+    left: 20px;
+
+    bottom: 22px;
+  }
+
+  .food-video-content h2 {
+    font-size: 26px;
+  }
+
+  .food-youtube-video {
+    width: 160%;
+
+    height: 160%;
+  }
+}

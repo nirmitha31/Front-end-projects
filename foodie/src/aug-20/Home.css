@@ -1,0 +1,918 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  overflow-x: hidden;
+}
+
+body {
+  background: #f5f5f5;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #222;
+}
+
+/* ================================
+   HOME PAGE
+================================ */
+
+.home-page {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-height: 100vh;
+
+  display: grid;
+
+  /*
+    IMPORTANT:
+    minmax(0, 1fr) allows the left side
+    to shrink without creating overflow.
+  */
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    340px;
+
+  gap: 20px;
+
+  padding: 18px 20px;
+
+  background: #f5f5f5;
+
+  overflow: hidden;
+}
+
+/* ================================
+   MAIN LEFT AREA
+================================ */
+
+.home-main {
+  width: 100%;
+
+  min-width: 0;
+
+  max-width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 25px 34px 30px;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+
+  overflow: hidden;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.home-header {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-bottom: 18px;
+}
+
+/* LOGO */
+
+.home-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #ff7b00, #ff5500);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  color: white;
+
+  font-size: 21px;
+}
+
+.home-logo h2 {
+  margin: 0;
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.home-logo h2 span {
+  color: #ff6200;
+}
+
+/* ================================
+   SEARCH
+================================ */
+
+.home-search {
+  flex: 1;
+
+  min-width: 180px;
+
+  max-width: 470px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  transition: 0.25s ease;
+}
+
+.home-search:focus-within {
+  border-color: #ff6500;
+
+  box-shadow: 0 0 0 3px rgba(255, 101, 0, 0.08);
+}
+
+.home-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  padding: 0 17px;
+
+  font-size: 14px;
+}
+
+.home-search button {
+  width: 48px;
+
+  height: 100%;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+/* ================================
+   HEADER ICONS
+================================ */
+
+.home-header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+}
+
+.header-icon-button {
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  position: relative;
+
+  transition: 0.2s ease;
+}
+
+.header-icon-button:hover {
+  background: #fff3ea;
+}
+
+.cart-count {
+  position: absolute;
+
+  top: -1px;
+
+  right: -1px;
+
+  width: 18px;
+
+  height: 18px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #ff6200;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: bold;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.home-hero {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 300px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 45%)
+    minmax(0, 55%);
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  margin-bottom: 27px;
+
+  background: linear-gradient(110deg, #fffaf6, #fff3e8);
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  min-width: 0;
+
+  padding: 35px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.hero-welcome {
+  margin: 0 0 12px;
+
+  color: #ff6500;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(34px, 3vw, 43px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+
+  color: #161616;
+}
+
+.hero-content h1 span {
+  color: #ff6200;
+}
+
+.hero-description {
+  max-width: 370px;
+
+  margin: 17px 0 22px;
+
+  color: #707070;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.order-now-button {
+  border: none;
+
+  background: linear-gradient(135deg, #ff7800, #ff5900);
+
+  color: #ffffff;
+
+  padding: 13px 24px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 16px rgba(255, 98, 0, 0.25);
+
+  transition: 0.25s ease;
+}
+
+.order-now-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 22px rgba(255, 98, 0, 0.35);
+}
+
+.explore-button {
+  border: none;
+
+  background: transparent;
+
+  color: #ff6200;
+
+  padding: 12px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero-image-area {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 52% 0 0 52%;
+}
+
+.hero-image-area img {
+  position: absolute;
+
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+/* DELIVERY CARD */
+
+.hero-delivery-card {
+  position: absolute;
+
+  left: 25px;
+
+  bottom: 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 10px 15px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  box-shadow: 0 7px 22px rgba(0, 0, 0, 0.12);
+
+  z-index: 2;
+}
+
+.hero-delivery-card > span {
+  font-size: 20px;
+}
+
+.hero-delivery-card strong {
+  display: block;
+
+  font-size: 12px;
+}
+
+.hero-delivery-card p {
+  margin: 3px 0 0;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+/* ================================
+   HOME SECTIONS
+================================ */
+
+.home-section {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  margin-top: 22px;
+
+  overflow: hidden;
+}
+
+.home-section-heading {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 12px;
+
+  padding: 0 5px;
+}
+
+.home-section-heading h2 {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: #252525;
+}
+
+.home-section-heading button {
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ff6500;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.home-section-heading button:hover {
+  text-decoration: underline;
+}
+
+.restaurant-home-section {
+  margin-top: 32px;
+}
+
+/*
+  Make existing child components
+  stay inside Home width.
+*/
+
+.home-section > div {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+}
+
+.home-section img {
+  max-width: 100%;
+}
+
+/*
+  Hide heading already available
+  inside FoodDisplay / RestaurantDisplay
+*/
+
+.home-section > div > h2 {
+  display: none;
+}
+
+/* ================================
+   FOOD DISPLAY SAFETY FIX
+================================ */
+
+/*
+  These rules prevent your existing
+  FoodDisplay from stretching the page
+  horizontally.
+
+  They don't change the individual
+  FoodDisplay JSX.
+*/
+
+.home-section > div > div {
+  max-width: 100%;
+}
+
+/* ================================
+   RESTAURANT DISPLAY SAFETY FIX
+================================ */
+
+.restaurant-home-section > div {
+  max-width: 100%;
+}
+
+/* ================================
+   BENEFITS
+================================ */
+
+.home-benefits {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-top: 32px;
+
+  padding: 19px 22px;
+
+  border: 1px solid #f3e4d9;
+
+  border-radius: 18px;
+
+  background: #fffaf6;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  overflow: hidden;
+}
+
+.home-benefit {
+  min-width: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.home-benefit-icon {
+  width: 40px;
+
+  height: 40px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #ffead9;
+
+  font-size: 19px;
+}
+
+.home-benefit strong {
+  display: block;
+
+  font-size: 12px;
+
+  color: #382319;
+
+  white-space: nowrap;
+}
+
+.home-benefit p {
+  margin: 4px 0 0;
+
+  color: #777;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+/* ================================
+   MOVIE ADVERTISEMENT
+================================ */
+
+.advertisement-area {
+  width: 100%;
+
+  max-width: 340px;
+
+  min-width: 0;
+
+  align-self: start;
+
+  position: sticky;
+
+  top: 18px;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.14);
+}
+
+.advertisement-area > * {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+}
+
+.advertisement-area img {
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* ================================
+   1200PX
+================================ */
+
+@media (max-width: 1200px) {
+  .home-page {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px;
+
+    gap: 16px;
+
+    padding: 15px;
+  }
+
+  .advertisement-area {
+    max-width: 300px;
+  }
+
+  .home-main {
+    padding: 22px 25px;
+  }
+
+  .home-header {
+    gap: 16px;
+  }
+
+  .home-search {
+    max-width: 400px;
+  }
+
+  .home-hero {
+    grid-template-columns:
+      minmax(270px, 44%)
+      minmax(0, 56%);
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .home-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    row-gap: 20px;
+  }
+}
+
+/* ================================
+   1050PX
+================================ */
+
+@media (max-width: 1050px) {
+  .home-logo h2 {
+    font-size: 23px;
+  }
+
+  .logo-icon {
+    width: 40px;
+
+    height: 40px;
+  }
+
+  .home-header {
+    gap: 12px;
+  }
+
+  .home-search {
+    max-width: none;
+  }
+
+  .home-hero {
+    grid-template-columns:
+      minmax(240px, 43%)
+      minmax(0, 57%);
+  }
+
+  .hero-content {
+    padding: 30px 8px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .home-page {
+    display: block;
+
+    padding: 12px;
+  }
+
+  .home-main {
+    width: 100%;
+
+    padding: 22px;
+  }
+
+  .advertisement-area {
+    position: static;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 25px auto 0;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 32px;
+  }
+
+  .hero-image-area {
+    min-height: 290px;
+
+    border-radius: 0;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .home-page {
+    padding: 8px;
+  }
+
+  .home-main {
+    padding: 16px;
+
+    border-radius: 17px;
+  }
+
+  .home-header {
+    height: auto;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+  .home-search {
+    order: 3;
+
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+  .home-logo h2 {
+    font-size: 22px;
+  }
+
+  .hero-content {
+    padding: 27px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 33px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-image-area {
+    min-height: 250px;
+  }
+
+  .home-benefits {
+    grid-template-columns: 1fr;
+
+    padding: 18px;
+  }
+
+  .home-benefit {
+    justify-content: flex-start;
+  }
+}

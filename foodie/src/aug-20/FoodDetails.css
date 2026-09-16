@@ -1,0 +1,802 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+}
+
+/* MAIN PAGE */
+
+.food-details-page {
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #fffaf6 0%, #f7f4f1 50%, #fffaf7 100%);
+
+  padding: 30px 40px 50px;
+}
+
+.food-details-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* BACK BUTTON */
+
+.back-button {
+  border: none;
+  background: #ffffff;
+  color: #442417;
+
+  padding: 13px 22px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-bottom: 22px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* MAIN CARD */
+
+.food-details-card {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow: 0 18px 55px rgba(54, 35, 23, 0.12);
+}
+
+/* =========================
+   LEFT IMAGE SECTION
+========================= */
+
+.food-details-image-section {
+  position: relative;
+
+  height: 650px;
+
+  background: #111;
+
+  overflow: hidden;
+}
+
+/* BIG IMAGE */
+
+.main-food-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
+}
+
+/* IMAGE BADGE */
+
+.image-badge {
+  position: absolute;
+
+  top: 26px;
+  left: 26px;
+
+  z-index: 5;
+
+  background: rgba(78, 37, 9, 0.88);
+
+  color: #ffffff;
+
+  padding: 11px 18px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  backdrop-filter: blur(8px);
+}
+
+/* FAVORITE BUTTON */
+
+.favorite-button {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  z-index: 5;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.favorite-button:hover {
+  background: #ff6a00;
+
+  transform: scale(1.08);
+}
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.food-thumbnail-section {
+  position: absolute;
+
+  bottom: 22px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 6;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 0 20px;
+}
+
+.food-thumbnail {
+  width: 90px;
+
+  height: 76px;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  background: #ffffff;
+
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.food-thumbnail img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+}
+
+.food-thumbnail:hover {
+  transform: translateY(-7px) scale(1.06);
+
+  border-color: #ff6a00;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.active-thumbnail {
+  border: 3px solid #ff6a00;
+
+  transform: translateY(-5px);
+}
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.food-details-content {
+  padding: 48px 52px 40px;
+
+  color: #342017;
+}
+
+/* BADGE */
+
+.food-badge {
+  display: inline-block;
+
+  background: #fff0e4;
+
+  color: #ff6500;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+
+.food-details-content h1 {
+  margin: 0 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  line-height: 1.1;
+
+  color: #3a1e12;
+}
+
+/* RATING */
+
+.rating-section {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 24px;
+}
+
+.rating {
+  background: #2ca443;
+
+  color: white;
+
+  padding: 8px 13px;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.review-text {
+  color: #777777;
+
+  font-size: 15px;
+}
+
+/* DESCRIPTION */
+
+.food-description {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #666666;
+}
+
+/* DIVIDER */
+
+.section-divider {
+  height: 1px;
+
+  background: #f1ded1;
+
+  margin: 20px 0;
+}
+
+/* PRICE */
+
+.food-price {
+  margin: 0 0 25px;
+
+  font-size: 36px;
+
+  color: #3c2116;
+}
+
+/* =========================
+   FOOD FEATURES
+========================= */
+
+.food-features {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #fff0e5;
+
+  font-size: 19px;
+}
+
+.feature-item > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.feature-item strong {
+  color: #4f352a;
+
+  font-size: 12px;
+
+  margin-bottom: 3px;
+}
+
+.feature-item span {
+  color: #777777;
+
+  font-size: 11px;
+}
+
+/* =========================
+   QUANTITY
+========================= */
+
+.quantity-section {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 5px;
+}
+
+.quantity-section p {
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+.quantity-control {
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid #ead7c9;
+
+  border-radius: 13px;
+
+  background: white;
+}
+
+.quantity-control button {
+  width: 54px;
+
+  height: 100%;
+
+  border: none;
+
+  background: #fff4eb;
+
+  color: #ff6500;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.quantity-control button:hover {
+  background: #ff6500;
+
+  color: white;
+}
+
+.quantity-control span {
+  width: 68px;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   DELIVERY MESSAGE
+========================= */
+
+.delivery-message {
+  margin-top: 23px;
+
+  padding: 16px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: linear-gradient(90deg, #f7fced, #f3faed);
+
+  border: 1px solid #d9e7ca;
+
+  border-radius: 10px;
+
+  color: #626262;
+
+  font-size: 14px;
+}
+
+.delivery-icon {
+  font-size: 21px;
+}
+
+/* =========================
+   TOTAL
+========================= */
+
+.total-section {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.total-section strong {
+  font-size: 29px;
+
+  color: #ff6500;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.food-action-buttons {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 17px;
+}
+
+.cart-button,
+.order-button {
+  height: 58px;
+
+  border-radius: 11px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+/* ADD TO CART */
+
+.cart-button {
+  background: white;
+
+  color: #4b2414;
+
+  border: 2px solid #ff6500;
+}
+
+.cart-button:hover {
+  background: #fff3eb;
+
+  transform: translateY(-2px);
+}
+
+/* BUY NOW */
+
+.order-button {
+  border: none;
+
+  color: white;
+
+  background: linear-gradient(135deg, #ff7a00, #ff5900);
+
+  box-shadow: 0 8px 18px rgba(255, 99, 0, 0.25);
+}
+
+.order-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 26px rgba(255, 99, 0, 0.35);
+}
+
+/* =========================
+   BOTTOM BENEFITS
+========================= */
+
+.food-benefits {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 25px 45px;
+
+  background: #fffcfa;
+
+  border-top: 1px solid #f3e5dc;
+}
+
+.benefit-item {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.benefit-icon {
+  font-size: 28px;
+}
+
+.benefit-item > div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.benefit-item strong {
+  font-size: 14px;
+
+  color: #48291d;
+}
+
+.benefit-item p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #777777;
+}
+
+/* =========================
+   FOOD NOT FOUND
+========================= */
+
+.food-not-found {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  background: #fffaf6;
+}
+
+.food-not-found h2 {
+  color: #3a1e12;
+}
+
+.food-not-found button {
+  border: none;
+
+  background: #ff6500;
+
+  color: white;
+
+  padding: 12px 25px;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .food-details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .food-details-image-section {
+    height: 550px;
+  }
+
+  .food-features {
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 20px;
+  }
+
+  .food-benefits {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .food-details-page {
+    padding: 18px 14px 35px;
+  }
+
+  .food-details-card {
+    border-radius: 20px;
+  }
+
+  .food-details-image-section {
+    height: 430px;
+  }
+
+  .image-badge {
+    top: 18px;
+
+    left: 18px;
+
+    font-size: 12px;
+
+    padding: 9px 13px;
+  }
+
+  .favorite-button {
+    top: 17px;
+
+    right: 17px;
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 23px;
+  }
+
+  .food-thumbnail-section {
+    gap: 8px;
+
+    padding: 0 10px;
+  }
+
+  .food-thumbnail {
+    width: 67px;
+
+    height: 60px;
+
+    border-radius: 9px;
+  }
+
+  .food-details-content {
+    padding: 32px 24px;
+  }
+
+  .food-details-content h1 {
+    font-size: 37px;
+  }
+
+  .food-price {
+    font-size: 31px;
+  }
+
+  .food-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quantity-section {
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+  .food-action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .food-benefits {
+    grid-template-columns: 1fr;
+
+    padding: 25px;
+  }
+
+  .benefit-item {
+    justify-content: flex-start;
+  }
+}
