@@ -1,0 +1,40 @@
+.iphone-section {
+  background-color: white;
+}
+.iphone-nav {
+  padding: 32px;
+  margin-left: 120px;
+}
+
+.iphone-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.iphone-items {
+  display: flex;
+  gap: 64px;
+  flex-wrap: nowrap;
+}
+
+.iphone-item {
+  text-align: center;
+  font-size: 14px;
+}
+
+.iphone-item img {
+  width: 64px;
+  height: auto;
+}
+
+.label {
+  display: block;
+  margin-top: 8px;
+}
+
+.tag {
+  color: #ff6a00;
+  font-size: 12px;
+  font-weight: 500;
+}

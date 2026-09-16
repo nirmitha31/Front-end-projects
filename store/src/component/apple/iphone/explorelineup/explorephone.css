@@ -1,0 +1,126 @@
+.lineup {
+  padding: 60px;
+  background: #f5f5f7;
+}
+
+.link-product {
+  color: black;
+}
+
+.lineup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  margin-left: 100px;
+}
+
+.lineup-header h2 {
+  font-size: 56px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+}
+
+.compare-link {
+  color: #0066cc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.lineup-grid {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.card {
+  border-radius: 24px;
+
+  background: white;
+  width: 302px;
+  height: auto;
+  border-radius: 28px;
+  border-style: none;
+}
+
+.card.dark {
+  background: linear-gradient(180deg, #000, #2a1a12);
+  color: white;
+}
+
+.card.light {
+  background: linear-gradient(180deg, #e6eef5, #ffffff);
+}
+
+.card.purple {
+  background: linear-gradient(180deg, #e8dff2, #ffffff);
+}
+
+.card.blue {
+  background: linear-gradient(180deg, #1b2c5c, #e6ebff);
+  color: white;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 20px;
+}
+
+.new-tag {
+  color: #ff6a00;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.price {
+  font-size: 13px;
+  margin: 12px 0 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #0071e3;
+  color: white;
+  border: none;
+}
+
+.btn.link {
+  background: transparent;
+  border: none;
+  color: #0071e3;
+}
+
+.phone-details {
+  padding: 50px 50px 0 50px;
+  height: 300px;
+  width: 300px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snaps to items when scrolling */
+  -webkit-overflow-scrolling: touch; /* Adds momentum scrolling for iOS */
+  /* Hide scrollbar if desired: */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

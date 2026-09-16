@@ -1,0 +1,68 @@
+export const response = {
+  title: "The latest. Truly awe-inspired gifts.",
+  products: [
+    {
+      id: 1,
+      name: "Iphone 17 Pro",
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-iphone-17-pro-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3Jod29LUXdLa0l4eHE1eFJDMGV5aG5PcGlJYS9HR0pEWlRaNTQ5aGsvYnhrYlM3UUxhTDY4VmxnT1pqOEpldm1McndYUldRZVYxMHFkRFZrQVZuaWMwSkFNQ1VOQ3VjWVczZldpb3Zjckt2L04",
+      caption: `Apple Intelligence `,
+      subcaption: "From 134900.00",
+    },
+    {
+      id: 2,
+      name: `MacBook Pro 14" with M5`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-macbook-pro-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoNmpHK2tTaEJpamxmbmdxR0xsQ1lsRDZqM2NrRWhBQWp6Y0VabWoxUktZZllEamZDVFNES0txdDcrN05FQnRVVVZIRWc3ZElMR0hNTHNzOE4xdkZ3N2NpbDRIRWlLN2J5NUw1OFB3UTNQY2I",
+      caption: "Apple Intelligence",
+      subcaption: "From 169900.00",
+    },
+    {
+      id: 3,
+      name: `iPad Pro`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-ipad-pro-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoOHBEMFY1ZWJ6N3JKaGFIMGVpb0E1SVdLZXJqVmFsbnhRcUdNVU4xNFVUZjczTGJ1bkVZOVdxMC9CSUwydmQ4a0NEQitwUkl0K1BsbXBFa3ZzYkFwT0lJZlg1K1VSMzYrZmlTTjlzTnRzUFM",
+      caption: "Apple Intelligence",
+      subcaption: "From 99900.00",
+    },
+    {
+      id: 4,
+      name: "Apple Watch Series 11",
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-watch-s11-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoNm1CcUdGVVdYV0JaTXRqdUlRVTRRZUx6Q1VSQ3BmNkIrSU9EZTEwMzltNFJSeXJaL3JqNm9jc2psYU5Qelh0TmhtejV5bnNoUG82YkVqZVhGVHJRSjd0bER1WGZ5VTI5OHA0ZWhhK1hmQm8",
+      caption: "",
+      subcaption: "From 134900.00",
+    },
+    {
+      id: 5,
+      name: `iPhone 17`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-iphone-17-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3Jod29LUXdLa0l4eHE1eFJDMGV5aG5PcUx6Q1VSQ3BmNkIrSU9EZTEwMzltNFJSeXJaL3JqNm9jc2psYU5Qelh0TmhtejV5bnNoUG82YkVqZVhGVHJRSjR5SHhQUEh4akwvR1cxaFMzMHR4UUM",
+      caption: "Apple Intelligence",
+      subcaption: "From 82900.00",
+    },
+    {
+      id: 6,
+      name: `MacBook Air`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-macbook-air-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoemNuSDFjY1g5TXJ2VDdqcm9MQmhkbG5WN1AwSEVaRjI4R0JlQ1VUZWZLMVlEamZDVFNES0txdDcrN05FQnRVVVZIRWc3ZElMR0hNTHNzOE4xdkZ3N2VlUkJkMkh0cHFPU3lpTkxkNVJ2c1Q",
+      caption: "Apple Intelligence",
+      subcaption: "From 99900.00",
+    },
+    {
+      id: 7,
+      name: "iPhone Air",
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-iphone-air-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoNjhTUlpZTGxJbXh5dHNBa0lFZi95dVJrM1JudG1iZ3ZLdGhSR1FVNDJUb3AwckMxbExydC8yeDhtUjlFVHdKVmtQQ3ZsREVjcTMrNnFZZjNPc2lwS25rL2VtMlRFYkdadjVLcmV6WE1IeDU",
+      caption: "Apple Intelligence",
+      subcaption: "From 114900.00",
+    },
+    {
+      id: 8,
+      name: `Apple Watch Ultra 3`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-watch-ultra-202511_GEO_IN?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoOUxmcStEYTVKc0pkcnEwY2J3d0txR0tabzZuYzFtaGN5QVBNUVEvcUhWd0pQdVJZZWNIQk44d1RuWU5yRGdkV1d4YXJFQWFnVmkrMkUzQ3k2TDVtN0UwUzZNOU85YWVyK2Z5SitXTnNHbVlpU3kyL0FKUlpaZ25KNUNrQi8rOWdR",
+      caption: "",
+      subcaption: "From 89900.00",
+    },
+    {
+      id: 9,
+      name: `Apple Watch SE 3`,
+      url: "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-holiday-watch-se-202511?wid=960&hei=1000&fmt=jpeg&qlt=90&.v=UWdrNzNrY0ZiOGhRNlVuUlF4U3JoOXlzalBnQlhPRFpjZ0xYam5Pd0tYc1dLZXJqVmFsbnhRcUdNVU4xNFVUZjczTGJ1bkVZOVdxMC9CSUwydmQ4a0NEQitwUkl0K1BsbXBFa3ZzYkFwT0paZC9Mc1lFZzNORmk3Ulc0NVVkQTE",
+      caption: "",
+      subcaption: "From 99900.00",
+    },
+  ],
+};

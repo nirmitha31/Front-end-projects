@@ -1,0 +1,95 @@
+.main {
+  transition: transform 0.2s;
+  margin-right: 40px;
+}
+
+.product-image {
+  max-height: 29.4117647059rem;
+  max-width: 28.2352941176rem;
+  border-radius: 20px;
+}
+
+.main:hover {
+  transform: scale(
+    1.05
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.inner-section:hover {
+  transform: scale(
+    1.05
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.outer-image {
+  position: relative;
+}
+
+.inner-section {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.product-view {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snaps to items when scrolling */
+  -webkit-overflow-scrolling: touch; /* Adds momentum scrolling for iOS */
+  /* Hide scrollbar if desired: */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.caption {
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0,
+    #670c83 14%,
+    #d82d97 25%,
+    #e23232 50%,
+    #ea6b2e 100%
+  );
+  color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+.caption sup {
+  color: #000;
+}
+
+.product-name {
+  color: #000;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1428571429;
+}
+
+.response-title {
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0,
+    #ea6b2e 8%,
+    gray 50%,
+    gray 100%
+  );
+  color: transparent;
+  background-clip: text;
+  display: inline-block;
+  display: inline;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  line-height: 1.1428571429;
+  margin-top: 100px;
+  margin-left: 150px;
+}

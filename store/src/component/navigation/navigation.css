@@ -1,0 +1,30 @@
+.navigation-main {
+  display: flex;
+  margin-left: 150px;
+  margin-top: 100px;
+  height: 200px;
+}
+
+.navigation-item {
+  margin: 30px;
+  height: 200px;
+}
+
+.navigation-image {
+  max-height: 78px;
+  width: 120px;
+}
+
+.navigation-heading {
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snaps to items when scrolling */
+  -webkit-overflow-scrolling: touch; /* Adds momentum scrolling for iOS */
+  /* Hide scrollbar if desired: */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

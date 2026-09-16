@@ -1,0 +1,187 @@
+/* General Layout & Typography Setup */
+.comp-container {
+  font-family: "SF Pro Text", Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* Header Section Styling */
+.comp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0 0 10px 0;
+}
+
+.price-details {
+  font-size: 21px;
+  color: #1d1d1f;
+  margin: 0 0 10px 0;
+}
+
+.intelligence-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.intelligence-text {
+  font-size: 14px;
+  color: #1d1d1f;
+  margin-right: 5px;
+}
+
+.learn-more-link {
+  font-size: 14px;
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pill-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f5f5f7;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1d1d1f;
+}
+
+/* Main Content: Phone comparison area */
+.comp-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Phone Display Area (Left Content) */
+.phone-display-area {
+  flex-grow: 1;
+  background-color: #f5f5f7; /* Light gray background as seen in image */
+  border-radius: 18px;
+  position: relative;
+  min-height: 500px; /* Approximate height based on image scale */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* To keep the placeholder inside the bounds */
+}
+
+.phone-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.phone-image-placeholder {
+  /* Placeholder for the phone images from the screenshot */
+  max-width: 100%;
+  height: 500px;
+  display: block;
+
+  /* This gradient mimics the shape outlines of the phones in the image. */
+  /* In a real app, images would be placed here. */
+}
+
+.carousel-arrow {
+  position: absolute;
+  right: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Comparison Selector Area (Right Content) */
+.comparison-selector-area {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comparison-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin: 0;
+}
+
+.model-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #d2d2d7;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.model-card.active {
+  border-color: #0071e3; /* Active state border color */
+  background-color: #f0f8ff; /* Active state background color */
+}
+
+.model-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.model-details strong {
+  font-weight: 600;
+}
+
+.model-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+  text-align: right;
+  color: #1d1d1f;
+}
+
+.help-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #f5f5f7;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.help-text-group p {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #6e6e73;
+}
